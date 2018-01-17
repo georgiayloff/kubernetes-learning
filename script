@@ -1,0 +1,14 @@
+getting started guide : https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
+
+
+minikube start
+eval $(minikube docker-env)
+
+-- Clean up
+kubectl delete service xxxxx
+kubectl delete deployment xxxxx
+minikube stop
+eval $(minikube docker-env -u) - undo
+
+-- optional
+minikube delete
